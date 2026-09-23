@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddEditIngredientActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/screen_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:text="Add Ingredient"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textIngredientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredient Name"
+                android:textStyle="bold"
+                android:padding="10dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editIngredientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:ems="10"
+                android:inputType="textCapSentences"
+                android:hint="Enter Ingredient Name"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:textStyle="bold"
+                android:padding="10dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:ems="10"
+                android:padding="10dp"
+                android:inputType="numberDecimal"
+                android:hint="Enter Quantity"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unit"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/inputUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Select Unit - Eg. grams, cups, pieces"
+                tools:ignore="DuplicateIds,HardcodedText"
+                />
+
+            <TextView
+                android:id="@+id/textExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="Expiry Date"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/inputExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="Select Expiry Date"
+
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/pick_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick Date"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/clear_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clear Date"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/save_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Item"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/bottom_navigation" />
+
+</LinearLayout>

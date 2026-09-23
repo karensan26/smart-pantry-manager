@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "smart_pantry.db";
@@ -90,10 +91,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private PantryItem pantryFromCursor(Cursor cursor) {
         int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
         String name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
-        double quantity = cursor.getColumnIndexOrThrow("quantity");
-        String unit = String.valueOf(cursor.getColumnIndexOrThrow("unit"));
-        int expiryIdx = cursor.getColumnIndexOrThrow("expiry_date");
-        String expiryDate = cursor.isNull(expiryIdx)? null:cursor.getString(expiryIdx);
+        double quantity = cursor.getDouble(cursor.getColumnIndexOrThrow("quantity"));
+        String unit = cursor.getString(cursor.getColumnIndexOrThrow("unit"));
+        int expiryIndex = cursor.getColumnIndexOrThrow("expiry_date");
+        String expiryDate = cursor.isNull(expiryIndex)? null:cursor.getString(expiryIndex);
 
         return new PantryItem(id, name, quantity, unit, expiryDate);
 
@@ -152,7 +153,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("name", name.trim());
         values.put("quantity", quantity);
-        values.put("unit", unit.trim().toLowerCase());
+        values.put("unit", unit.trim().toLowerCase(Locale.ROOT));
         if (expiryDate == null || expiryDate.trim().isEmpty()) {
             values.putNull("expiry_date");
         } else {

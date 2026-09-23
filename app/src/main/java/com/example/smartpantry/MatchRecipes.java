@@ -45,7 +45,7 @@ public class MatchRecipes {
         return normalizeName(a).equals(normalizeName(b));
     }
 
-    public static String normalizeName(String value) { // <-- was ";" before, now has a body
+    public static String normalizeName(String value) {
         String name = value.toLowerCase(Locale.ROOT).trim().replaceAll("\\s+", " ");
         if (name.equals("tomatoes")) return "tomato";
         if (name.equals("potatoes")) return "potato";
@@ -89,6 +89,24 @@ public class MatchRecipes {
                 return new Amount(amount, "slice");
             default:
                 return new Amount(amount, unit);
+            case "clove":
+            case "cloves":
+                return new Amount(amount, "clove");
+            case"cup":
+                case "cups":
+                    return new Amount(amount, "cup");
+            case "can":
+                case "cans":
+                    return new Amount(amount, "can");
+            case "pack":
+                case "packs":
+                    return new Amount(amount, "pack");
+            case "bunch":
+                case "bunches":
+                    return new Amount(amount, "bunch");
+
+
+
         }
     }
 

@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">SmartPantry</string>
+    <string name="pantry">Pantry</string>
+    <string name="recipes">Recipes</string>
+    <string name="settings">Settings</string>
+    <string name="see_what_s_in_the_pantry">See what\'s in the pantry</string>
+    <string name="my_pantry">My Pantry</string>
+    <string name="your_pantry_is_empty_nstart_adding_ingredients">Your pantry is empty.\nStart adding ingredients!</string>
+    <string name="add_ingredient">+ Add Ingredient</string>
+    <string name="pantry_no_expiry">No expiry date</string>
+    <string name="pantry_expiry_format">Expires: %1$s</string>
+    <string name="pantry_quantity_format">%1$s %2$s</string>
+    <string name="suggested_recipes">Suggested Recipes</string>
+    <string name="suggested_recipes_with_pantry_ingredients">Suggested recipes with Pantry Ingredients</string>
+    <string name="no_recipes_match_your_pantry_yet_nadd_more_ingredients">No recipes match your pantry yet.\nAdd more ingredients!</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="method">Method</string>
+    <string name="pantry_preferences">Pantry Preferences</string>
+    <string name="smart_pantry_manager">Smart Pantry Manager</string>
+    <string name="cook_what_you_ve_got">Cook what you’ve got!</string>
+    <string name="get_alerts_when_ingredients_are_nearing_expiry">Get alerts when ingredients are nearing expiry.</string>
+    <string name="expiring_soon_alerts">Expiring-soon alerts</string>
+    <string name="edit_ingredient">Edit Ingredient</string>
+    <string name="add_ingredient">Add Ingredient</string>
 </resources>
