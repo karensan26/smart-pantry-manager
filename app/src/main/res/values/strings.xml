@@ -22,5 +22,5 @@
     <string name="get_alerts_when_ingredients_are_nearing_expiry">Get alerts when ingredients are nearing expiry.</string>
     <string name="expiring_soon_alerts">Expiring-soon alerts</string>
     <string name="edit_ingredient">Edit Ingredient</string>
-    <string name="add_ingredient">Add Ingredient</string>
+
 </resources>
